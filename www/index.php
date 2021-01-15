@@ -1,20 +1,10 @@
-<?
+<?php
 	include_once "./inc/head.php";
 ?>
 <body>
 	<div id="wrap">
-		<? include_once "./inc/header.php"; ?>
-		<div id="quick">
-			<a href="#" class="kakao" target="_blank">
-				<i></i><span>카톡상담</span>
-			</a>
-			<a href="#" class="blog" target="_blank">
-				<i></i><span>네이버블로그</span>
-			</a>
-			<a href="#" class="com">
-				<i></i><span>오시는길</span>
-			</a>
-		</div>
+		<?php include_once "./inc/header.php"; ?>
+		<?php include_once "./inc/quick.php"; ?>
 
 		<div id="container">
 			<div id="main-banner">
@@ -368,144 +358,10 @@
 					</div>
 				</div>
 			</div>
-
-		<? include_once "./inc/footer.php"; ?>
+		</div>
+		<?php include_once "./inc/footer.php"; ?>
 
 	</div>
-
-	<script>
-
-
-		var swiper = new Swiper('#banner .swiper-container', {
-			centeredSlides: true,
-			slidesPerView: 'auto',
-			initialSlide: 0,
-			loop: true,
-			grabCursor: false,
-			observer: true,
-			pagination: {
-				clickable: true,
-				el: '#banner .swiper-pagination',
-				type: 'bullets'
-			},
-			speed: 800,
-			navigation: {
-				nextEl: '#banner .swiper-button-next',
-				prevEl: '#banner .swiper-button-prev'
-			},
-			autoplay: {
-				delay: 2500,
-				reverseDirection: false,
-				disableOnInteraction: false
-			}
-		});
-
-			var swiper = new Swiper('#main-banner .swiper-container', {
-				slidesPerView: 'auto',
-				initialSlide: 0,
-				loop: true,
-				grabCursor: false,
-				speed: 800,
-				autoplay: {
-					delay: 2500,
-					reverseDirection: false,
-					disableOnInteraction: false
-				},
-				pagination: {
-					el: '#main-banner .swiper-pagination',
-					type: 'fraction',
-				},
-				navigation: {
-					nextEl: '#main-banner .swiper-button-next',
-					prevEl: '#main-banner .swiper-button-prev',
-				},
-			});
-
-		var swiper = new Swiper('#mainTv .swiper-container', {
-			slidesPerView: 6,
-			slidesPerColumn: 2,
-			slidesPerColumnFill:'row',
-			spaceBetween: 27,
-			pagination: {
-				el: '#mainTv .swiper-pagination',
-				clickable: true,
-			},
-			navigation: {
-				nextEl: '#mainTv .swiper-button-next',
-				prevEl: '#mainTv .swiper-button-prev',
-			},
-			breakpoints:{
-				320: {
-					slidesPerView: 2,
-					slidesPerColumn: 3,
-				},
-				768: {
-					slidesPerView: 3,
-					slidesPerColumn: 2,
-				},
-				1024:{
-					slidesPerView: 4,
-					slidesPerColumn: 2,
-				},
-				1200:{
-					slidesPerView: 5,
-					slidesPerColumn: 2,
-				},
-				1400:{
-					slidesPerView: 6,
-					slidesPerColumn: 2,
-				}
-			}
-		});
-
-		var swiper = new Swiper('#viveve .swiper-container', {
-				slidesPerView: 3.5,
-				spaceBetween: 60,
-				loop:true,
-				speed: 800,
-				// autoplay: {
-				// 	delay: 2500,
-				// 	reverseDirection: false,
-				// 	disableOnInteraction: false
-				// },
-				breakpoints: {
-					320: {
-						slidesPerView: 2,
-						spaceBetween: 60,
-					},
-					768: {
-						slidesPerView: 3,
-						spaceBetween: 40,
-					},
-					1024: {
-						slidesPerView: 4,
-						spaceBetween: 40,
-					},
-					1430: {
-						slidesPerView: 3.5,
-						spaceBetween: 60,
-					}
-			}
-			});
-
-
-			$(function () {
-					$(".banner_open_button").on("click", function () {
-						$('body').toggleClass('is-banner-active');
-					});
-					$(".banner_close_button").on("click", function () {
-						$('body').removeClass('is-banner-active');
-					});
-				});
-				$(window).on('load resize', function () {
-					setTimeout(function(){
-						$("#viveve .swiper-container .bg").css({
-							width: $("#viveve .swiper-container .swiper-slide-active").outerWidth(),
-							height: $("#viveve .swiper-container .swiper-slide-active").outerHeight()
-						});
-					},1000);
-				});
-	</script>
 </body>
 
 </html>

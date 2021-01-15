@@ -44,11 +44,11 @@
 			</div>
 			<div class="button_wrap">
 				<button class="banner_open_button">
-					E V E N T
-					<div class="button_plus">
+					H O N E S T
+					<!-- <div class="button_plus">
 						<span></span>
 						<span></span>
-					</div>
+					</div> -->
 				</button>
 				<div class="background_gradient"></div>
 			</div>
@@ -58,8 +58,10 @@
 		<header>
 			<div class="top_div">
 				<h1 class="logo">
-					<img class="non-fix" src="/resource/images/logo.png" alt="">
-					<img class="fix" src="/resource/images/logo-black.png" alt="">
+					<a href="/">
+						<img class="non-fix" src="/resource/images/logo.png" alt="">
+						<img class="fix" src="/resource/images/logo-black.png" alt="">
+					</a>
 				</h1>
 				<a href="#none" class="menu-button">
 					<div class="bar"></div>
@@ -98,7 +100,7 @@
 						<a href="#none">Healthiness</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="#none">Healthiness</a>
+								<a href="/health/page.php">Healthiness</a>
 							</li>
 						</ul>
 					</li>
