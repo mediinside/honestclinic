@@ -1,11 +1,16 @@
 <?php
-	include_once "./inc/head.php";
+	include_once  './_init.php';
+	include_once $GP -> INC_WWW . '/head.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
+    include_once $GP -> HOME."main_lib/main_proc.php";
+
+    // $Main_Notice = Main_Notice(10);//공지사항
+    // $Main_counsel = Main_Notice(40);//언론보도
 ?>
 <body>
 	<div id="wrap">
-		<?php include_once "./inc/header.php"; ?>
-		<?php include_once "./inc/quick.php"; ?>
-
+		<?php include_once $GP -> INC_WWW . '/header.php'; ?>
+		<?php include_once $GP -> INC_WWW . '/quick.php'; ?>
 		<div id="container">
 			<div id="main-banner">
 				<div class="swiper-container">
@@ -359,7 +364,17 @@
 				</div>
 			</div>
 		</div>
-		<?php include_once "./inc/footer.php"; ?>
+		<?php  include_once $GP -> INC_WWW . "/footer.php"; ?>
+		<?
+			$mobile_agent = '/(iPod|iPhone|Android|BlackBerry|SymbianOS|SCH-M\d+|Opera Mini|Windows CE|Nokia|SonyEricsson|webOS|PalmOS)/';
+
+			// preg_match() 함수를 이용해 모바일 기기로 접속하였는지 확인
+			if(preg_match($mobile_agent, $_SERVER['HTTP_USER_AGENT'])) {
+				include "./popup/popup_layer.php";
+			}else{
+				include "./popup/popup_script.php";
+			}
+		?>
 
 	</div>
 </body>

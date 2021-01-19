@@ -121,10 +121,10 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#none">Community</a>
+						<a href="/community/community.php?jb_code=20">Community</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="#none">공지사항</a>
+								<a href="/community/community.php?jb_code=20">공지사항</a>
 							</li>
 							<li>
 								<a href="#none">언론보도</a>
