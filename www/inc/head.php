@@ -7,6 +7,7 @@
 	<title>어니스트 의원</title>
 	<link rel="stylesheet" href="/resource/css/reset.css">
 	<link rel="stylesheet" href="/resource/css/style.css">
+	<link rel="stylesheet" href="/resource/css/board.css">
 	<link rel="stylesheet" href="/resource/css/swiper.min.css">
 	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> -->
 	<script src="/resource/js/jquery-1.12.2.min.js"></script>
