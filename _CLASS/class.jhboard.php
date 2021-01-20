@@ -724,7 +724,8 @@ CLASS JHBoard extends Dbconn
         
        // echo "asd" . $search_key ; 
        // echo "zzasd" . $search_keyword ; 
-       //검색 키워드 지정시
+	   //검색 키워드 지정시	   
+	 
 		if($search_key == 'jb_all'){         		
             $addQry .= " AND (jb_title LIKE '%${search_keyword}%' || jb_content LIKE '%${search_keyword}%')";
         }else if($search_key && $search_keyword) {

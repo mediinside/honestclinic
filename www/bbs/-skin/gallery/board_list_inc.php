@@ -132,20 +132,23 @@ if($data_list_cnt > 0) {
 			}
                
 		
-				echo ("                           
+				echo ("                          
 
 						<li>
-							<a href='" . $get_par . "' class='panel'>
-								<div class='picture'>
-									${img_src}
-									<div class='overlay'></div>
-								</div>
-								<dl class='info'>
-									<dt class='subject'>${jb_title}</dt>
-									<dd class='date'>${jb_reg_date}</dd>
-								</dl>
-							</a>
-						</li>
+						<a href='" . $get_par . "'>
+							<span class='thumb'>${img_src}</span>
+							<p class='tit'>
+								${jb_title}
+							</p>
+							<p class='txt'>
+								${jb_content}
+							</p>
+							<p class='info'>
+								<strong></strong>
+								<span class='reply'>${jb_see}</span>
+							</p>
+						</a>
+					</li>			
 
 				");
 

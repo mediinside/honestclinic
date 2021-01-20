@@ -100,7 +100,7 @@
 						<a href="#none">Healthiness</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="/health/page.php">Healthiness</a>
+								<a href="/contents/con_list.php?tc_cate=A">Healthiness</a>
 							</li>
 						</ul>
 					</li>
@@ -108,7 +108,7 @@
 						<a href="#none">Happiness</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="#none">Happiness</a>
+								<a href="/contents/con_list.php?tc_cate=B">Happiness</a>
 							</li>
 						</ul>
 					</li>
@@ -116,18 +116,18 @@
 						<a href="#none">Beauteous</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="#none">Beauteous</a>
+								<a href="/contents/con_list.php?tc_cate=C">Beauteous</a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="/community/community.php?jb_code=20">Community</a>
+						<a href="/community/community.php?jb_code=10">Community</a>
 						<ul class="sub-menu">
 							<li>
-								<a href="/community/community.php?jb_code=20">공지사항</a>
+								<a href="/community/community.php?jb_code=10">공지사항</a>
 							</li>
 							<li>
-								<a href="#none">언론보도</a>
+								<a href="/community/community.php?jb_code=20">언론보도</a>
 							</li>
 							<li>
 								<a href="#none">증명서 발급안내</a>

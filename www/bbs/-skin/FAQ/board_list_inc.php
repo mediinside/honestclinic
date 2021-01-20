@@ -38,10 +38,11 @@ if($data_list_cnt > 0) {
 			$jb_order					= $data_list[$i]['jb_order'];
 			$jb_idx						= $data_list[$i]['jb_idx'];
 			$jb_step					= $data_list[$i]['jb_step'];
-			$jb_title 					= $C_Func->strcut_utf8($data_list[$i]['jb_title'], 43, true, "...");	//제목 (길이, HTML TAG제한여부 처리)
-			$jb_content					= $C_Func->dec_contents_view($data_list[$i]['jb_content']);
-			$jb_content					= trim(strip_tags($jb_content));
-			$jb_content 				= $C_Func->strcut_utf8($jb_content, 100, true, "...");	//제목 (길이, HTML TAG제한여부 처리)
+			$jb_title 					= $C_Func->strcut_utf8($data_list[$i]['jb_title'], 100, true, "...");	//제목 (길이, HTML TAG제한여부 처리)
+			$jb_content					= $C_Func->dec_contents_edit($data_list[$i]['jb_content']);
+           // $jb_content					= trim(strip_tags($jb_content));
+
+			//$jb_content 				= $C_Func->strcut_utf8($jb_content, 100, true, "...");	//제목 (길이, HTML TAG제한여부 처리)
 
 			if($jb_email != "") { $jb_email = $C_Func->auto_link($jb_email); } 						//이메일 (이메일 자동 링크 처리, 폼메일 또는 아웃룩)
 			if($jb_homepage != "") { $jb_homepage = $C_Func->auto_link($jb_homepage); }		//홈페이지 (URL 자동 링크 처리)
@@ -106,48 +107,24 @@ if($data_list_cnt > 0) {
 				$get_par.="&search_key=" . $_GET['search_key'] . "&search_keyword=${search_keyword}&page=${page}&dep1=${dep1}&dep2=${dep2}";
 			}
 
-			//상세보기 링크생성
-			//$jb_title = "<a href=\"".$get_par."\">" . $jb_title . "</a>";
-
-			//비밀글 이미지
-			if($jb_secret_check == "Y") {
-				$jb_title = $jb_title . $secret_icon;		//비밀글이미지...
-			}
-
-			if($jb_file_code != ''){
-
-				$jb_title = $jb_title . $new_file;
-				}
 
 
-			$jb_title = $depth_icon . $jb_title . $comment_count . $new_icon; //이미지타이틀 처리
-			           
-			
-			$img_src = '';
-			if($jb_file_code != '') {
-				$code_file = $GP->UP_IMG_SMARTEDITOR_URL. "/jb_${jb_code}/${jb_file_code}";
-				$img_src = "<img src='" . $code_file. "' class='block'>";
-			}else{
-				$img_src = "<img src='/images/common/nk_thumbnail.jpg' alt='이미지 없음'  >";
-			}
-               
-		
-				echo ("                           
+            if($check_level >= 9 || $check_id == $jb_mb_id)
+            $modify = "<a class='btn-sm ft-c01 ' href=\"${get_par}\"  title=\"수정\">수정</a>";
 
-						<li>
-							<a href='" . $get_par . "' class='panel'>
-								<div class='picture'>
-									${img_src}
-									<div class='overlay'></div>
-								</div>
-								<dl class='info'>
-									<dt class='subject'>${jb_title}</dt>
-									<dd class='date'>${jb_reg_date}</dd>
-								</dl>
+		/*
+		*/
+                echo ("
+                        <div class='item'>
+							<a href='#none' class='collapsed' title='열기'>
+								<span>${jb_title}</span>
 							</a>
-						</li>
-
-				");
+							<div class='collapse'>
+								<p>${jb_content}</p>
+								${modify}
+                            </div>
+						</div>
+                     ");
 
 			$dummy++;
 	}
@@ -161,6 +138,5 @@ if($data_list_cnt > 0) {
 		");
 }
 ?>
-
 
 

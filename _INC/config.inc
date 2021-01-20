@@ -114,6 +114,10 @@ $GP -> UP_cooperative_URL			= $GP -> HTTP . '/common/cooperative/';
 $GP -> UP_donation				= $GP -> HOME . 'common/donation/';
 $GP -> UP_donation_URL			= $GP -> HTTP . '/common/donation/';
 
+## 컨텐츠
+$GP -> UP_CONTENT			= $GP -> HOME . 'contents/upfile/';
+$GP -> UP_CONTENT_URL			= $GP -> HTTP . '/contents/upfile/';
+
 $GP->DB_TABLE = "domain";
 
 
@@ -299,136 +303,12 @@ $GP -> SLIDE_LANG = array(
                 'chn' => '중문',
 			);
 
-//병원연혁
-$GP -> SLIDE_TYPE = array(
-				'1' => '1990’S',
-				'2' => '2000’S',
-				'3' => '2010’S',
-                '4' => '2020’S',
+//컨텐츠 정보
+$GP->PAIN_TYPE = array(
+				'A' => 'Healthiness',
+				'B' => 'Happiness',
+				'C' => 'Beauteous',				
 			);
-//회보기재활안내
-$GP -> SERVICE_TYPE = array(
-				'1' => '메인영상',
-				'2' => '관련영상1',
-				'3' => '관련영상2',
-                '4' => '관련영상3',
-			);
-
-//의사정보 ENG
-$GP -> ENG_CENTER_TYPE = array(
-				'A' => 'Spine center',
-				'B' => 'Joint center',
-				'C' => 'Nonsurgical treatment center',
-				'D' => 'Neurology center',
-				'E' => 'Internal Medicine/Health Promotion Center',
-				'F' => 'Imaging Diagnosis Center',
-				'G' => 'Anti aging Center(Dermatology & Urology)',
-			);
-
-
-$GP -> ENG_CLINIC_TYPE = array(
-				'A' => 'neurosurgeon',
-				'B' => 'orthopedic surgeon',
-				'C' => 'anesthesiologist',
-				'D' => 'neurologist',
-				'E' => 'Internist',
-				'F' => 'radiologist',
-				'G' => 'urologist',
-			);
-
-$GP -> ENG_DOCTOR_POSITION = array(
-				'A' => 'President',
-				'B' => 'Vice President',
-				'C' => 'Director',
-				'D' => 'Manager',
-				'F' => 'Chief medical officer',
-				'G' => 'President of international medical center',
-				'H' => 'Center director',
-				'I' => 'Head manager',
-				'J' => 'Fellow',
-			);
-
-$GP -> ENG_DOCTOR_THESIS = array(
-				'B' => 'Ph.D.'
-			);
-$GP -> ENG_BRANCH = array(
-				'suwon' => '수원점',
-				'anyang' => '안양점',
-			);
-//ENG END
-
-
-//의사정보 러시아
-$GP -> RUS_CENTER_TYPE = array(
-				'A' => 'Спинальный центр',
-				'B' => 'Ортопедическое отделение',
-				'C' => 'Центр безоперационного лечения',
-				'D' => 'Отделение неврологии',
-				'E' => 'Терапевтическое отделение /Центр комплексного обследования',
-				'F' => 'Центр визуальной диагностики'
-			);
-
-
-$GP -> RUS_CLINIC_TYPE = array(
-				'A' => 'Спинальная нейрохирургия ',
-				'B' => 'Ортопедия',
-				'C' => 'анестезиология',
-				'D' => 'неврология',
-				'E' => 'терапевтичесие заболевания',
-				'F' => 'Радиология',
-			);
-
-$GP -> RUS_DOCTOR_POSITION = array(
-				'A' => 'главный врач больницы',
-				'B' => 'заместитель главного врача',
-				'C' => 'врач',
-				'D' => 'врач',
-				'F' => 'заведующий отделением',
-				'G' => 'директор Международного медицинского центра',
-				'H' => 'директор центра',
-				'I' => 'врач',
-			);
-$GP -> RUS_DOCTOR_THESIS = array(
-				'B' => 'Доктор медицинских наук'
-			);
-//ENG END
-
-
-//의사정보 몽골
-$GP -> MONG_CENTER_TYPE = array(
-				'A' => 'Нуруу нугасны төв',
-				'B' => 'Үе мөчний төв',
-				'C' => 'Мэс заслын бус эмчилгээний төв',
-				'D' => 'Мэдрэлийн төв',
-				'E' => 'Дотор / Эрүүл мэндийн шинжилгээний төв',
-				'F' => 'Дүрс бичлэг оношлогооны төв'
-			);
-
-
-$GP -> MONG_CLINIC_TYPE = array(
-				'A' => 'Мэдрэлийн мэс заслын тасаг',
-				'B' => 'Гэмтэл согогийн мэс заслын тасаг',
-				'C' => 'Мэдээ алдуулалт, өвчин намдаах тасаг',
-				'D' => 'Мэдрэлийн тасаг',
-				'E' => 'Дотрын тасаг',
-				'F' => 'Дүрс,оношлогооны тасаг',
-			);
-
-$GP -> MONG_DOCTOR_POSITION = array(
-				'A' => 'Эмнэлгийн дарга',
-				'B' => 'Эмнэлгийн орлогч дарга',
-				'C' => 'Ахлах зэргийн эмч',
-				'D' => 'Зөвлөх зэргийн эмч',
-				'F' => 'Тэргүүлэх зэргийн эмч',
-				'G' => 'Олон улсын харилцааны дарга',
-				'H' => 'Төвийн дарга',
-				'I' => 'Тэргүүлэх зэргийн эмч',
-			);
-$GP -> MONG_DOCTOR_THESIS = array(
-				'B' => 'Анагаах ухааны доктор'
-			);
-//MONG END
-
 
 $GP -> DOCTOR_SCH = array(
 				'1' => '외래진료',

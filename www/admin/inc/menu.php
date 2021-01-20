@@ -3,12 +3,13 @@
 // Writer :
 $GP -> MENU_ADMIN = array(
 		array("tab"=>"1",			"folder"=>"main", 			"name"=>"관리자정보",			"link"=> "/admin/main/adm_info.php?m_tab=1"),
-        array("tab"=>"2",			"folder"=>"bbs", 			"name"=>"게시판관리",			"link"=> "/admin/bbs/bbs_list.php?m_tab=2"),
-       // array("tab"=>"3",			"folder"=>"member", 		"name"=>"회원관리",			"link"=> "/admin/member/mem_list.php?m_tab=3"),	        
+		array("tab"=>"2",			"folder"=>"bbs", 			"name"=>"게시판관리",			"link"=> "/admin/bbs/bbs_list.php?m_tab=2"),
+		array("tab"=>"3",			"folder"=>"content", 		"name"=>"컨텐츠관리",		"link"=> "/admin/content/content_list.php?m_tab=3"),      
+		array("tab"=>"4",			"folder"=>"phone", 			"name"=>"상담신청",				"link"=> "/admin/phone/phone_list.php?m_tab=4"),
+		array("tab"=>"5",			"folder"=>"popup", 		"name"=>"팝업관리",			"link"=> "/admin/popup/popup_list.php?m_tab=5"),
+		 // array("tab"=>"3",			"folder"=>"member", 		"name"=>"회원관리",			"link"=> "/admin/member/mem_list.php?m_tab=3"),	        
 		//array("tab"=>"13",			"folder"=>"slide", 			"name"=>"슬라이드관리",		"link"=> "/admin/slide/main_slide_list.php?m_tab=13"),
 		//array("tab"=>"14",			"folder"=>"online", 			"name"=>"예약관리",			"link"=> "/admin/online/reserve_list.php?m_tab=14"),		
-		array("tab"=>"3",			"folder"=>"phone", 			"name"=>"상담신청",				"link"=> "/admin/phone/phone_list.php?m_tab=3"),
-		array("tab"=>"4",			"folder"=>"popup", 		"name"=>"팝업관리",			"link"=> "/admin/popup/popup_list.php?m_tab=4"),
 		
 		//array("tab"=>"12",			"folder"=>"sms", 			"name"=>"SMS관리",			"link"=> "/admin/sms/sms_send.php?m_tab=12"),
 		// array("tab"=>"15",			"folder"=>"analytics", 		"name"=>"통계관리",			"link"=> "/admin/analytics/day_visit.php?m_tab=15"),
@@ -30,6 +31,14 @@ $GP -> MENU_SUB_ADMIN['bbs'] = array(
 		array("tab"=>"1",		"title"=>"bbs1",		"name"=>"게시판 리스트",				"link"=>  "/admin/bbs/bbs_list.php"),
 		// array("tab"=>"2",		"title"=>"bbs2",		"name"=>"입사지원 리스트",			"link"=>  "/admin/bbs/recruit_list.php"),
 		// array("tab"=>"3",		"title"=>"bbs3",		"name"=>"입사지원 마감 리스트",	"link"=>  "/admin/bbs/recruit_end_list.php"),
+	)
+);
+
+$GP -> MENU_SUB_ADMIN['content'] = array(
+	"컨텐츠관리"   => array(
+		array("tab"=>"1",		"title"=>"content1",		"name"=>"컨텐츠 관리",				"link"=>  "/admin/content/content_list.php"),
+		array("tab"=>"2",		"title"=>"content2",		"name"=>"해시태그 관리",				"link"=>  "/admin/content/hastag_list.php"),
+		
 	)
 );
 

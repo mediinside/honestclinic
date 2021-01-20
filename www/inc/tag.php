@@ -1,20 +1,39 @@
+<?
+	include_once($GP -> CLS."class.hastag.php");
+	$C_hastag 	= new hastag;
+	
+	$tc_cate = $_GET['tc_cate'];	
+
+	$args = array();
+	$args['tc_cate'] = $tc_cate;	
+	$h_data = "";
+	$h_data = $C_hastag -> Has_Main_List($args);
+?>
 			<div class="search-tag">
 				<div class="inner">
 					<div class="tag-search">
-						<input type="text" placeholder="궁금하신 점을 검색어를 통해 찾아보세요.">
-						<button type="button">검색</button>
+					<form id="search_form" name="search_form" method="get" action="?">
+                        <input type="hidden" name="jb_code" id="jb_code" value="<?=$jb_code?>" />
+                        <input type="hidden" name="search_key" id="search_key" value="jb_all" /> 					
+                        <input type="text" placeholder="궁금하신 점을 검색어를 통해 찾아보세요." name="search_keyword" id="search_keyword" value="<?=$_GET['search_keyword']?>">
+                        <button type="button" id="search_submit">검색</button>
+                    </form>					
 					</div>
 					<div class="tag">
-						<span>#웨딩검진</span>
-						<span>#산전검진</span>
-						<span>#암검진</span>
-						<span>#질염</span>
-						<span>#생리통</span>
-						<span>#난임</span>
-						<span>#웨딩검진</span>
-						<span>#산전검진</span>
-						<span>#암검진</span>
-						<span>#산전검진</span>
+					<?php					
+						$arr_tmp = explode('#',$h_data[0]['tc_hashtag']);							
+						for ($j=1; $j<count($arr_tmp); $j++ ) {										
+					?>
+						<a href="/contents/con_list.php?tc_cate=<?=$tc_cate?>&search_content=<?=$arr_tmp[$j]?>"><span><?=$arr_tmp[$j]?></span></a>
+					<? } ?>					
 					</div>
 				</div>
 			</div>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$('#search_submit').click(function(){
+					$('#search_form').submit();
+					return false;
+				});
+			});
+			</script>
