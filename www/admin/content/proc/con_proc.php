@@ -116,6 +116,7 @@ switch($_POST['mode']){
 		$args['tc_login'] 						= $tc_login;
 		$args['tc_vd_view'] 					= $tc_vd_view;
 		$args['tc_hashtag'] 					= $tc_hashtag;
+		$args['tc_link'] 					= $tc_link;
 		$args['tc_title'] 					= addslashes($tc_title);
 		$args['tc_summary'] 					= addslashes($tc_summary);
 		$args['tc_content'] 			= $C_Func->enc_contents($tc_content);
@@ -278,6 +279,7 @@ switch($_POST['mode']){
 		$args['tc_view'] 						= $tc_view;
 		$args['tc_vd_view'] 					= $tc_vd_view;
 		$args['tc_hashtag'] 					= $tc_hashtag;
+		$args['tc_link'] 					= $tc_link;
 		$args['tc_title'] 						= addslashes($tc_title);
 		$args['tc_summary'] 					= addslashes($tc_summary);
 		$args['tc_content'] 					= $C_Func->enc_contents($tc_content);

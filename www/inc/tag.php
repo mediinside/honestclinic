@@ -13,9 +13,8 @@
 				<div class="inner">
 					<div class="tag-search">
 					<form id="search_form" name="search_form" method="get" action="?">
-                        <input type="hidden" name="jb_code" id="jb_code" value="<?=$jb_code?>" />
-                        <input type="hidden" name="search_key" id="search_key" value="jb_all" /> 					
-                        <input type="text" placeholder="궁금하신 점을 검색어를 통해 찾아보세요." name="search_keyword" id="search_keyword" value="<?=$_GET['search_keyword']?>">
+                        <input type="hidden" name="tc_cate" id="tc_cate" value="<?=$tc_cate?>" />                        				
+                        <input type="text" placeholder="궁금하신 점을 검색어를 통해 찾아보세요." name="search_content" id="search_content" value="<?=$_GET['search_content']?>">
                         <button type="button" id="search_submit">검색</button>
                     </form>					
 					</div>

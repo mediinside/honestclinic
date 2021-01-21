@@ -72,7 +72,7 @@
 							";	
                             }else{
                            		$str .= "	
-								<li><a href='/contents/con_view.html?tc_idx=$tc_idx'>
+								<li><a href='/contents/con_view.php?tc_idx=$tc_idx'>
 									<span class='thumb'>" . $img_src ."</span>
 									<p class='tit'>" .  $tc_title . "</p>
 									<p class='txt'>" . $tc_summary . "</p>

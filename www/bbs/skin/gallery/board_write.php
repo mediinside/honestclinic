@@ -4,8 +4,10 @@
 <input type="hidden" name="jb_bruse_check" value="Y" checked>
 <input type="hidden" name="img_full_name" id="img_full_name" />
 <input type="hidden" name="upfolder" id="upfolder" value="jb_<?=$jb_code?>" />
-                <h3 class="page-tit">공지사항</h3>
-                <div class="tableType-01 black consended">
+<div class="inner2">
+				<h3 class="page-tit">공지사항</h3>
+
+				<div class="tableType-01 pink consended">
 					<table width="100%" class="writeType">
 						<colgroup>
 							<col width="15%">
@@ -29,7 +31,19 @@
                         <td>
                             <input type="text" class="txtInput" style="width:100%;" id="jb_name" value="<?=$check_name?>" name="jb_name" >
                         </td>
-                    </tr>                   
+                    </tr>
+                    <tr>
+                        <th scope="row">공개여부</th>
+                        <td>
+                            <span class="chkBox">
+                            <?
+                                if(isset($check_id) && $check_level>=9){
+                                echo "<label class='noti'><input type=\"checkbox\" value=\"Y\" id=\"jb_notice_check\" name=\"jb_notice_check\" class='chk'> 공지</label>";
+                                }
+                            ?>									
+                            </span>
+                        </td>
+                    </tr>
                     <tr>
                         <th scope="row">이메일</th>
                         <td>
@@ -52,12 +66,12 @@
                         echo ("<input type=\"hidden\" name=\"jb_password\" value=\"${jb_password}\">");
                         }
                     ?>
-                    <!--tr>
+                    <tr>
                         <th scope="row" class="viewLink">링크</th>
                         <td>
                             <input type="text" class="txtInput"  style="width:100%;" id="jb_homepage" name="jb_homepage">
                         </td>
-                    </tr-->
+                    </tr>
                     <tr>
                         <th scope="row" class="viewFile"><span class="icon">첨부파일</span></th>
                         <td>
@@ -97,8 +111,8 @@
                 </tbody>
             </table>
             <div id="btn-box" class="center">
-                <a href="#none" class="btn bg-lightgreen" id="img_submit">확인</a>
-				<a href="javascript:history.go(-1);" class="btn bg-puple">취소</a>
+                <a href="#none" class="btn bg-pink" id="img_submit">확인</a>
+				<a href="javascript:history.go(-1);" class="btn bg-brown">취소</a>
             </div>
         </div>
     </form>

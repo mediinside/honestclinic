@@ -1,8 +1,7 @@
-<div class="cont-tit" style="opacity: 0;display: none;">
-				<h3>글읽기</h3>
-			</div>
-			<div class="s-inner" style="margin-top: 100px;">
-				<div class="tableType-01 green no-border">
+<div class="inner2">
+				<h3 class="page-tit">공지사항</h3>
+
+				<div class="tableType-01 pink no-border">
 					<table width="100%" class="viewType">
 						<caption style="display:none;">공지사항 상세</caption>
 						<colgroup>
@@ -25,9 +24,8 @@
 										<?=$content?>
 									</div>
 								</td>
-							</tr>
-							<!--																				
-							<?php if($file_cnt > 0) {?>
+							</tr>																				
+							<!-- <?php if($file_cnt > 0) {?>
 							<tr>
                                 <td style="text-align:left;" colspan="3">
 									<div class="viewFile">
@@ -55,8 +53,8 @@
 							?>
 									</div>
 								</td>
-							</tr>-->
-							<?}?>
+							</tr>
+							<?}?> -->
 							<?php if($jb_homepage) {?>
 							<tr>
 								<td style="text-align:left;" colspan="3">																		
@@ -70,13 +68,13 @@
 						</tbody>
 					</table>
 					<div id="btn-box" class="right">
-						<a href="<?=$get_par1?>" class="btn bg-green">이전글</a>
-						<a href="<?=$get_par2?>" class="btn bg-green">다음글</a>
+						<a href="<?=$get_par1?>" class="btn bg-gray">이전글</a>
+						<a href="<?=$get_par2?>" class="btn bg-gray">다음글</a>
 						<?if($check_level >= $db_config_data['jba_write_level']) {?>
-						<a href="#none" onclick="javascript:location.href='<?=$get_par?>&jb_mode=tdelete'"  class="btn bg-lightgreen" title="삭제">삭제</a>
-						<a href="#\" onclick="javascript:location.href='<?=$get_par?>&jb_mode=tmodify'"  class="btn bg-puple" title="수정">수정</a>
+						<a href="#none" onclick="javascript:location.href='<?=$get_par?>&jb_mode=tdelete'"  class="btn bg-puple" title="삭제">삭제</a>
+						<a href="#\" onclick="javascript:location.href='<?=$get_par?>&jb_mode=tmodify'"  class="btn bg-lightgreen" title="수정">수정</a>
 						<?}?>
-						<a href="<?=$index_page?>?jb_code=<?=$jb_code?>&<?=$search_key?>&search_keyword=<?=$search_keyword?>&page=<?=$page?>" class="btn bg-orange">목록</a>
+						<a href="<?=$index_page?>?jb_code=<?=$jb_code?>&<?=$search_key?>&search_keyword=<?=$search_keyword?>&page=<?=$page?>" class="btn bg-pink">목록</a>
 					</div>
 
 					<div class="viewComment">

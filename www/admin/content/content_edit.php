@@ -49,6 +49,13 @@
 							</td>
 						</tr>
 						<tr>
+							<th><span>*</span>유튜브 링크</th>
+								<td><input type="text" class="input_text" title="링크 입력" id="tc_link" name="tc_link" value="<?=$tc_link?>"  />
+								<br>ex) https://youtu.be/sdYUbha
+								</td>
+							</tr>
+						<tr>
+						<tr>
 								<th><span>*</span>내용</th>
 								<td>                          
 									<textarea name="tc_content" id="tc_content" style="display:none"></textarea>
@@ -56,7 +63,7 @@
 								</td>
 						</tr>													
 						<tr>
-							<th><span>*</span>대표 이미지</th>
+							<th><span>*</span>썸네일 이미지</th>
 							<td>
 								<input type="file" name="tc_file_code" id="tc_file_code" size="30" class="input_text">
 								<?
@@ -66,8 +73,28 @@
 									<a href="#" onClick="img_del('<?=$tc_file_code;?>','<?=$_GET['tc_idx']?>')">(X)</a>
 								<?}?>
 							</td>
-						</tr>	
+						</tr>
 						<tr>
+							<th><span>*</span>작성자</th>
+							<td>
+								<input type="text" class="input_text" size="70" name="tc_user" id="tc_user" value="<?=$tc_user?>"  />
+							</td>
+						</tr>	  
+						<tr>
+							<th><span>*</span>콘텐츠 노출여부</th>
+							<td>
+								<input type="radio" name="tc_view" value="Y" <? if($tc_view == "Y") { echo "checked";}?> />노출
+							<input type="radio" name="tc_view" value="N" <? if($tc_view == "N") { echo "checked";}?> />미노출
+						  </td>
+						</tr>  
+						<tr>
+							<th><span>*</span>메인영상노출여부</th>
+							<td>
+								<input type="radio" name="tc_vd_view" value="Y" <? if($tc_vd_view == "Y") { echo "checked";}?> />노출
+							<input type="radio" name="tc_vd_view" value="N" <? if($tc_vd_view == "N") { echo "checked";}?> />미노출
+						  </td>
+						</tr>       		
+						<!-- <tr>
 							<th><span>*</span>썸네일 이미지</th>
 							<td>
 								<input type="file" name="tc_file_code2" id="tc_file_code2" size="30" class="input_text">
@@ -78,41 +105,24 @@
 									<a href="#" onClick="img_del2('<?=$tc_file_code2;?>','<?=$_GET['tc_idx']?>')">(X)</a>
 								<?}?>
 							</td>
-						</tr>						
-						<tr>
-							<th><span>*</span>작성자</th>
-							<td>
-								<input type="text" class="input_text" size="70" name="tc_user" id="tc_user" value="<?=$tc_user?>"  />
-							</td>
-						</tr>	         
-						<tr>
+						</tr>						 -->
+															
+                             
+						<!-- <tr>
 							<th><span>*</span>메인노출여부</th>
 							<td>
 								<input type="radio" name="tc_main_view" value="Y" <? if($tc_main_view == "Y") { echo "checked";}?> />노출
 							<input type="radio" name="tc_main_view" value="N" <? if($tc_main_view == "N") { echo "checked";}?> />미노출
 						  </td>
 						</tr> 
-                        <tr>
-							<th><span>*</span>메인영상노출여부</th>
-							<td>
-								<input type="radio" name="tc_vd_view" value="Y" <? if($tc_vd_view == "Y") { echo "checked";}?> />노출
-							<input type="radio" name="tc_vd_view" value="N" <? if($tc_vd_view == "N") { echo "checked";}?> />미노출
-						  </td>
-						</tr>       										
-                        <tr>
-							<th><span>*</span>콘텐츠 노출여부</th>
-							<td>
-								<input type="radio" name="tc_view" value="Y" <? if($tc_view == "Y") { echo "checked";}?> />노출
-							<input type="radio" name="tc_view" value="N" <? if($tc_view == "N") { echo "checked";}?> />미노출
-						  </td>
-						</tr> 
+                        
                         <tr>
 							<th><span>*</span>로그인 호출 여부</th>
 							<td>
 								<input type="radio" name="tc_login" value="Y" <? if($tc_login == "Y") { echo "checked";}?> />로그인
 							<input type="radio" name="tc_login" value="N" <? if($tc_login == "N") { echo "checked";}?> />비로그인
 						  </td>
-						</tr>   
+						</tr>    -->
 					</tbody>
 				</table>				
 				<div style="margin-top:5px; text-align:center;">

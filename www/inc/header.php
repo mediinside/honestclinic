@@ -130,10 +130,10 @@
 								<a href="/community/community.php?jb_code=20">언론보도</a>
 							</li>
 							<li>
-								<a href="#none">증명서 발급안내</a>
+								<a href="/community/page01.php">증명서 발급안내</a>
 							</li>
 							<li>
-								<a href="#none">대피처방 안내</a>
+								<a href="/community/page02.php">대피처방 안내</a>
 							</li>
 						</ul>
 					</li>

@@ -4,8 +4,10 @@
 <input type="hidden" name="jb_bruse_check" value="Y" checked>
 <input type="hidden" name="img_full_name" id="img_full_name" />
 <input type="hidden" name="upfolder" id="upfolder" value="jb_<?=$jb_code?>" />
-                <h3 class="page-tit">공지사항</h3>
-                <div class="tableType-01 black consended">
+<div class="inner2">
+				<h3 class="page-tit">공지사항</h3>
+
+				<div class="tableType-01 pink consended">
 					<table width="100%" class="writeType">
 						<colgroup>
 							<col width="15%">
@@ -109,8 +111,8 @@
                 </tbody>
             </table>
             <div id="btn-box" class="center">
-                <a href="#none" class="btn bg-lightgreen" id="img_submit">확인</a>
-				<a href="javascript:history.go(-1);" class="btn bg-puple">취소</a>
+                <a href="#none" class="btn bg-pink" id="img_submit">확인</a>
+				<a href="javascript:history.go(-1);" class="btn bg-brown">취소</a>
             </div>
         </div>
     </form>

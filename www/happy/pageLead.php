@@ -1,4 +1,6 @@
 <?php
+	include_once $_SERVER['DOCUMENT_ROOT'] . '/_init.php';
+	include_once $GP -> INC_WWW . '/count_inc.php';
 	include_once "../inc/head.php";
 ?>
 <body>

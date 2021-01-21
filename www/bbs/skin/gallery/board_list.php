@@ -1,33 +1,35 @@
-<h3 class="page-tit"><?=$title?></h3>
-    <div class="board-post">
-        <ul class="list">
-        <?php include $GP -> INC_PATH . "/${skin_dir}/board_list_inc.php";	?>
-        </ul>
-    </div>
-    <div class="search">					
-        <form id="search_form" name="search_form" method="get" action="?">
-            <input type="hidden" name="jb_code" id="jb_code" value="<?=$jb_code?>" />
-            <input type="hidden" name="search_key" id="search_key" value="jb_all" /> 					
-            <input type="text" placeholder="검색어를 입력하세요." name="search_keyword" id="search_keyword" value="<?=$_GET['search_keyword']?>">
-            <button><img src="/resource/images/search-gray.png" alt="검색" id="search_submit" ></button>
-        </form>
-    </div>
-    <div id="btn-box" class="right">
-    <?php
-        if($_GET['search_key'] && $_GET['search_keyword']) {
-            echo "<a href=\"javascript:;\" class=\"btn0\" onclick=\"javascript:location.href='${index_page}?jb_code=${jb_code}'\" title='목록'><span>목록</span></a>";
-        }       
-        //쓰기권한
-        if($check_level >= $db_config_data['jba_write_level']) {
-            echo "<a class='btn bg-green' href=\"#\" onclick=\"javascript:location.href='${index_page}?jb_code=${jb_code}&jb_mode=twrite'\" title='글쓰기'><span>글쓰기</span></a>";
-        } else {
-        //	echo "<a class='btn btn_middle' id='twrite_btn' title='글쓰기'><strong>글쓰기</strong></a>";
-        }
-    ?>          
-    </div>
-    <div class="pagination">
-        <?=$page_link?>						
-    </div>
+<div class="inner2">
+				<h3 class="page-tit">언론보도</h3>
+				<div class="board-post">
+					<ul class="list">						
+                         <?php include $GP -> INC_PATH . "/${skin_dir}/board_list_inc.php";	?>
+                    </ul>
+				</div>
+				<div class="search">					
+                    <form id="search_form" name="search_form" method="get" action="?">
+                        <input type="hidden" name="jb_code" id="jb_code" value="<?=$jb_code?>" />
+                        <input type="hidden" name="search_key" id="search_key" value="jb_all" /> 					
+                        <input type="text" placeholder="검색어를 입력하세요." name="search_keyword" id="search_keyword" value="<?=$_GET['search_keyword']?>">
+                        <button><img src="/resource/images/search-gray.png" alt="검색" id="search_submit" ></button>
+                    </form>
+				</div>
+                <div class="pagination">
+                    <?=$page_link?>						
+				</div>
+                <div id="btn-box" class="right">
+                <?php
+                    if($_GET['search_key'] && $_GET['search_keyword']) {
+                        echo "<a href=\"javascript:;\" class=\"btn0\" onclick=\"javascript:location.href='${index_page}?jb_code=${jb_code}'\" title='목록'><span>목록</span></a>";
+                    }       
+                    //쓰기권한
+                    if($check_level >= $db_config_data['jba_write_level']) {
+                        echo "<a class='btn bg-pink' href=\"#\" onclick=\"javascript:location.href='${index_page}?jb_code=${jb_code}&jb_mode=twrite'\" title='글쓰기'><span>글쓰기</span></a>";
+                    } else {
+                    //	echo "<a class='btn btn_middle' id='twrite_btn' title='글쓰기'><strong>글쓰기</strong></a>";
+                    }
+                ?>          
+                </div>
+			
 
     
     <script type="text/javascript">

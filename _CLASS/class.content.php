@@ -217,6 +217,7 @@ CLASS Content extends Dbconn
 				tc_summary = '$tc_summary',
 				tc_content = '$tc_content',
 				tc_hashtag = '$tc_hashtag',
+				tc_link = '$tc_link',
 				tc_file_code = '$tc_file_code',
 				tc_file_code2 = '$tc_file_code2',
 				tc_view = '$tc_view',
@@ -294,6 +295,7 @@ CLASS Content extends Dbconn
 					tc_summary,
 					tc_content,
 					tc_hashtag,
+					tc_link,
 					tc_file_code,
 					tc_file_code2,
 					tc_desc,
@@ -318,6 +320,7 @@ CLASS Content extends Dbconn
 					, '$tc_summary'
 					, '$tc_content'
 					, '$tc_hashtag'
+					, '$tc_link'
 					, '$tc_file_code'		
 					, '$tc_file_code2'		
 					, '$tc_desc'
